@@ -31,6 +31,16 @@ function createHeart() {
   setTimeout(() => heart.remove(), 8000);
 }
 
+function createHeartMobile() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 8000);
+}
+
 function createText() {
     const text = document.createElement("h3");
     text.classList.add("text");
@@ -42,9 +52,20 @@ function createText() {
     setTimeout(() => text.remove(), 6000);
 }
 
+function createTextMobile() {
+    const text = document.createElement("h3");
+    text.classList.add("text");
+    const randomIndex = Math.floor(Math.random() * array.length);
+    text.textContent = array[randomIndex];
+    text.style.left = Math.random() * 90 + "vw";
+    text.style.animationDuration = 4 + Math.random() * 2 + "s";
+    document.body.appendChild(text);
+    setTimeout(() => text.remove(), 6000);
+}
+
 if(window.innerWidth <= 768){
-    setInterval(createText, 2500);
-    setInterval(createHeart, 3000);
+    setInterval(createTextMobile, 2500);
+    setInterval(createHeartMobile, 3000);
 } else {
     setInterval(createText, 4000);
     setInterval(createHeart, 1200);
