@@ -41,5 +41,11 @@ function createText() {
     document.body.appendChild(text);
     setTimeout(() => text.remove(), 6000);
 }
-setInterval(createText, 4000)
-setInterval(createHeart, 1200);
+
+if(window.innerWidth <= 768){
+    setInterval(createText, 2500);
+    setInterval(createHeart, 3000);
+} else {
+    setInterval(createText, 4000);
+    setInterval(createHeart, 1200);
+}
