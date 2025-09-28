@@ -1,0 +1,105 @@
+* {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Bonheur Royale', cursive;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.name {
+    font-size: 1em;
+}
+  
+.timer {
+    font-size: 2em;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer label, span {
+    font-size: 64px;
+    font-weight: 500;
+}
+
+
+
+@keyframes float {
+    0%   { transform: translateY(0)   rotate(0deg);   opacity: 0.8; }
+    100% { transform: translateY(-50vh) rotate(360deg); opacity: 0; }
+}
+.heart {
+    z-index: 1;
+    position: fixed;
+    bottom: -50px;
+    font-size: 1.5rem;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes textFloat {
+    0% { transform: translateY(0) rotate(0); opacity: 0.8; }
+    100% {transform: translateY(-50vh) rotate(10deg); opacity: 0; }
+}
+
+.text {
+    z-index: 1;
+    position: fixed;
+    bottom: -50px;
+    font-size: 2rem;
+    animation: textFloat 4s linear infinite;
+    pointer-events: none;
+}
+
+.heart-container {
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+}
+
+.heart-container img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 3px red);
+}
+
+.heart-text {
+    font-family: 'Bonheur Royale', cursive;
+    font-style: normal;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+}
+
+.letter > p {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
