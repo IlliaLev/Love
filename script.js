@@ -47,7 +47,7 @@ function createText() {
     const randomIndex = Math.floor(Math.random() * array.length);
     text.textContent = array[randomIndex];
     text.style.left = Math.random() * 100 + "vw";
-    text.style.animationDuration = 4 + Math.random() * 2 + "s";
+    text.style.animationDuration = "6s";
     document.body.appendChild(text);
     setTimeout(() => text.remove(), 6000);
 }
@@ -57,10 +57,10 @@ function createTextMobile() {
     text.classList.add("text");
     const randomIndex = Math.floor(Math.random() * array.length);
     text.textContent = array[randomIndex];
-    text.style.left = Math.random() * 90 + "vw";
-    text.style.animationDuration = 4 + Math.random() * 2 + "s";
+    text.style.left = 10 + Math.random() * 80 + "vw";
+    text.style.animationDuration = "4s";
     document.body.appendChild(text);
-    setTimeout(() => text.remove(), 6000);
+    setTimeout(() => text.remove(), 4000);
 }
 
 if(window.innerWidth <= 768){

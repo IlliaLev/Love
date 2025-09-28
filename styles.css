@@ -128,4 +128,9 @@ h1 {
     .text {
         font-size: 1.2rem;
     }
+
+    @keyframes textFloat {
+        0% { transform: translateY(0) rotate(0); opacity: 0.8; }
+        100% {transform: translateY(-35vh) rotate(10deg); opacity: 0; }
+    }
 }
